@@ -22,8 +22,8 @@ slider.addEventListener('mouseup', () => {
 
 slider.addEventListener('mousemove', (e) => {
   if (!isDown) return;
-  e.preventDefault();
+  e.preventDefault(); // Prevent default selection behavior
   const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 2; // Scroll speed multiplier
+  const walk = (x - startX) * 2; // Speed multiplier
   slider.scrollLeft = scrollLeft - walk;
 });
